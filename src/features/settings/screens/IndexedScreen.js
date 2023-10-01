@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSelector } from 'react-redux';
 import {
   BusinessIcon,
+  CompaignIcon,
   LogoutIcon,
   OpenAIIcon,
   ProfileIcon,
@@ -48,7 +49,7 @@ const IndexedScreen = ({ navigation }) => {
       </AppText>
       <View style={styles.cardContainer}>
         <View style={styles.card}>
-          <ProfileIcon style={{ marginRight: 11 }} />
+          <ProfileIcon color="gray" style={{ marginRight: 11 }} />
           <AppText>Account information</AppText>
         </View>
 
@@ -60,22 +61,26 @@ const IndexedScreen = ({ navigation }) => {
             )
           }
         >
-          <OpenAIIcon style={{ marginRight: 11 }} />
+          <OpenAIIcon color="gray" style={{ marginRight: 11 }} />
           <AppText>AI-Powered Assistance</AppText>
         </TouchableOpacity>
 
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => navigation.navigate('compaign')}
+        >
+          <CompaignIcon color="gray" width={20} height={20} />
+          <AppText style={{ marginLeft: 11 }}>Marketing Compaigns</AppText>
+        </TouchableOpacity>
+
         <View style={styles.card}>
-          <BusinessIcon style={{ marginRight: 11 }} />
+          <BusinessIcon color="gray" style={{ marginRight: 11 }} />
           <AppText>Monitor Google Business profile</AppText>
         </View>
+
         <View style={styles.card}>
-          <BusinessIcon style={{ marginRight: 11 }} />
-          <AppText>Campaigns</AppText>
-        </View>
-        <View style={styles.card}>
-          <BusinessIcon style={{ marginRight: 11 }} />
+          <BusinessIcon color="gray" style={{ marginRight: 11 }} />
           <AppText>AI automated review responses</AppText>
-          {/* <Switch active={isAutomated} onChange={handleChangeAutomated} /> */}
         </View>
 
         <View style={styles.row} />

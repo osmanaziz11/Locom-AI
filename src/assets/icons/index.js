@@ -1,6 +1,14 @@
 /* eslint-disable prettier/prettier */
 import React, { Fragment } from 'react';
-import Svg, { G, Path, Circle, Defs, ClipPath, Mask } from 'react-native-svg';
+import Svg, {
+  G,
+  Path,
+  Circle,
+  Defs,
+  ClipPath,
+  Mask,
+  Ellipse,
+} from 'react-native-svg';
 
 export const LogoIcon = (props) => {
   return (
@@ -71,11 +79,7 @@ export const InternetIcon = ({
   );
 };
 
-export const SendIcon = ({
-  width = 30,
-  height = 30,
-  color = 'black',
-}) => {
+export const SendIcon = ({ width = 30, height = 30, color = 'black' }) => {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +90,22 @@ export const SendIcon = ({
       <Path
         fill={color}
         d="M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2M8 7.71v3.34l7.14.95l-7.14.95v3.34L18 12L8 7.71Z"
+      />
+    </Svg>
+  );
+};
+
+export const CompaignIcon = ({ width = 30, height = 30, color = 'black' }) => {
+  return (
+    <Svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 16 16"
+    >
+      <Path
+        fill={color}
+        d="M14.25 2.1a1.25 1.25 0 0 0-1.17-.1L6.91 4.43a1.22 1.22 0 0 1-.46.09H2.5a1.25 1.25 0 0 0-1.25 1.25v.1H0v3h1.25V9a1.25 1.25 0 0 0 1.25 1.22L4 13.4a1.26 1.26 0 0 0 1.13.72h.63A1.25 1.25 0 0 0 7 12.87v-2.53l6.08 2.43a1.27 1.27 0 0 0 .47.09a1.29 1.29 0 0 0 .7-.22a1.25 1.25 0 0 0 .55-1V3.13a1.25 1.25 0 0 0-.55-1.03zm-8.5 3.67V9H2.5V5.77zm0 7.1h-.63l-1.23-2.65h1.86zm1.62-3.72A2.29 2.29 0 0 0 7 9V5.7a2.26 2.26 0 0 0 .37-.11l6.18-2.46v8.48zm7.46-3.03v2.5a1.25 1.25 0 0 0 0-2.5z"
       />
     </Svg>
   );

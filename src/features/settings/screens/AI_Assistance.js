@@ -2,15 +2,11 @@
 
 /* eslint-disable react-native/no-inline-styles */
 import React, { useEffect, useState } from 'react';
-
 import { StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FlatList } from 'react-native-gesture-handler';
-
 import OptionCard from 'src/components/common/OptionCard';
-
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
 import { ALERT_TYPE, Toast } from 'react-native-alert-notification';
 import CustomModal from 'src/components/common/CustomModal';
 import { useMutation } from '@tanstack/react-query';

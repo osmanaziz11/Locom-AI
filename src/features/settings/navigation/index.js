@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { IndexedScreen } from '../screens';
 import { AssistanceNavigation } from './assistance';
 import OnboardingScreen from '../components/assistance/onBoarding';
+import { CompaignNavigation } from '../compaigns/navigation';
+
 
 const SettingsNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -38,6 +40,15 @@ const SettingsNavigation = () => {
       <Stack.Screen
         name="assistance/onboarding"
         component={OnboardingScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      {/* Compaigns Navigation  */}
+      <Stack.Screen
+        name="compaign"
+        component={CompaignNavigation}
         options={{
           headerShown: false,
         }}
